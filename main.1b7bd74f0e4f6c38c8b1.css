@@ -1,0 +1,119 @@
+.example {
+  display: grid;
+  grid-gap: 50px; }
+
+.js-test {
+  width: 80%;
+  height: 500px;
+  padding: 10px;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  justify-content: space-around; }
+  .js-test .inputPanel {
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    flex-direction: column;
+    margin-left: 2rem; }
+    .js-test .inputPanel input {
+      order: -1; }
+
+.slider {
+  position: relative;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  width: 100%;
+  height: 20px;
+  background: #b5e7a0;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  align-items: center; }
+  .slider .axis {
+    width: 100%;
+    position: relative; }
+    .slider .axis .range {
+      position: absolute;
+      height: 20px;
+      background: #86af49;
+      transform-origin: 0 50%;
+      transform: translate(0, 50%); }
+    .slider .axis .handle {
+      position: absolute;
+      left: 0;
+      width: 20px;
+      height: 20px;
+      background: #86af49;
+      border: 5px solid #e3eaa7;
+      border-radius: 50%;
+      transform-origin: 50% 0;
+      transform: translate(-50%, 50%); }
+      .slider .axis .handle .title {
+        background: #e3eaa7;
+        position: absolute;
+        left: 50%;
+        top: -120%;
+        transform-origin: 50% 50%;
+        transform: translate(-50%, 0); }
+
+.slider.vertical {
+  width: 20px;
+  height: 100%;
+  justify-content: center; }
+  .slider.vertical .axis {
+    height: 100%;
+    width: 0;
+    position: relative; }
+    .slider.vertical .axis .range {
+      transform-origin: 50% 0;
+      width: 20px;
+      height: 0;
+      transform: translate(-50%, 0); }
+    .slider.vertical .axis .handle {
+      bottom: 0;
+      transform: translate(-50%, 50%); }
+      .slider.vertical .axis .handle .title {
+        background: #e3eaa7;
+        position: absolute;
+        left: 150%;
+        top: -50%;
+        transform: translate(0, 50%); }
+
+.config {
+  white-space: pre; }
+
+.slider .scale {
+  height: 2px;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 200%;
+  background: #b5e7a0; }
+  .slider .scale p {
+    position: absolute;
+    margin: 0;
+    transform-origin: 0 0;
+    bottom: 0;
+    transform: translate(0, 100%) rotate(45deg); }
+
+.slider.vertical {
+  margin-left: 20px;
+  margin-top: 20px; }
+  .slider.vertical .scale {
+    height: 100%;
+    width: 2px;
+    left: -100%;
+    top: 0; }
+    .slider.vertical .scale p {
+      transform: translate(-100%, 0); }
+
+
+/*# sourceMappingURL=main.1b7bd74f0e4f6c38c8b1.css.map*/
