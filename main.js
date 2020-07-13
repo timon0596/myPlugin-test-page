@@ -155,10 +155,10 @@
 /************************************************************************/
 /******/ ({
 
-/***/ "./src/controller/controller2.ts":
-/*!***************************************!*\
-  !*** ./src/controller/controller2.ts ***!
-  \***************************************/
+/***/ "./src/controller/controller.ts":
+/*!**************************************!*\
+  !*** ./src/controller/controller.ts ***!
+  \**************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -318,9 +318,8 @@ module.exports = template;
 /* WEBPACK VAR INJECTION */(function($) {
 Object.defineProperty(exports, "__esModule", { value: true });
 __webpack_require__(/*! ./index.pug */ "./src/index.pug");
-__webpack_require__(/*! ./plugin.ts */ "./src/plugin.ts");
 __webpack_require__(/*! ./style.sass */ "./src/style.sass");
-__webpack_require__(/*! ./types */ "./src/types.ts");
+__webpack_require__(/*! ./plugin.ts */ "./src/plugin.ts");
 var c = [];
 var opts = [
     { values: [100, 600], step: 13, initialValues: [200, 250, 10], handles: 3 },
@@ -445,7 +444,6 @@ var Model = /** @class */ (function () {
     };
     Model.prototype.range = function () {
         var start = this.handlePos.length < 2 ? 0 : Math.min.apply(Math, this.handlePos);
-        console.log(this.handlePos);
         return { start: start, lngt: Math.max.apply(Math, this.handlePos) - start };
     };
     return Model;
@@ -476,7 +474,7 @@ var __assign = (this && this.__assign) || function () {
     return __assign.apply(this, arguments);
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-var controller2_1 = __webpack_require__(/*! ./controller/controller2 */ "./src/controller/controller2.ts");
+var controller_1 = __webpack_require__(/*! ./controller/controller */ "./src/controller/controller.ts");
 (function ($) {
     $.fn.timonSliderPlugin = function (options) {
         var initOptions = {
@@ -486,9 +484,6 @@ var controller2_1 = __webpack_require__(/*! ./controller/controller2 */ "./src/c
             title: true,
             range: true,
             values: ['aaa', 'sss', 'ddd', 'fff', 'qqq', 'www', 'eee', 'rrr', 'zzz', 'xxx'],
-            // values: [123,567],
-            // initialValues:['3','4','5'],
-            // initialValues:[-1000,-1000],
             initialValues: ['qqq', 'www', 'eee'],
             type: 'string',
             slidersize: 0,
@@ -498,7 +493,7 @@ var controller2_1 = __webpack_require__(/*! ./controller/controller2 */ "./src/c
             el: $()
         };
         initOptions = __assign(__assign(__assign({}, initOptions), options), { el: this });
-        var controller = new controller2_1.Controller(initOptions);
+        var controller = new controller_1.Controller(initOptions);
         return new Proxy(this, {
             get: function (target, prop) {
                 switch (prop) {
@@ -524,19 +519,6 @@ var controller2_1 = __webpack_require__(/*! ./controller/controller2 */ "./src/c
 /***/ (function(module, exports, __webpack_require__) {
 
 // extracted by mini-css-extract-plugin
-
-/***/ }),
-
-/***/ "./src/types.ts":
-/*!**********************!*\
-  !*** ./src/types.ts ***!
-  \**********************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
 
 /***/ }),
 
